@@ -1,0 +1,25 @@
+OPIS WYNIKÓW
+Test statyczny (Faza 1): Udowadnia, że zadania w kolejce układają się zgodnie z priorytetami (HIGH, MEDIUM, LOW).
+
+Test dynamiczny / zator (Faza 2): Symuluje nagłe, jednoczesne nadejście wielu zadań w warunkach pracy wielowątkowej. Udowadnia, że synchronizacja za pomocą mutexu i zmiennej warunkowej działa poprawnie pod obciążeniem, a wątki robocze bezpiecznie czekają na zwolnienie blokady, zachowując priorytetyzację i zasadę FIFO wewnątrz nich." 
+
+Logi:
+[Worker] Watek roboczy uruchomiony.
+[Main] Dodaje zadanie LOW (ID: 1)
+[Main] Dodaje zadanie MEDIUM (ID: 2)
+[Main] Dodaje zadanie HIGH (ID: 3)
+[Worker] Pobrano zadanie ID: 3 (Priorytet: 0)
+[Worker] Pobrano zadanie ID: 2 (Priorytet: 1)
+[Worker] Pobrano zadanie ID: 1 (Priorytet: 2)
+
+[Main] Symulacja zatoru: dodaje 3 zadania bardzo szybko...
+[Worker] Pobrano zadanie ID: 20 (Priorytet: 0)
+[Worker] Pobrano zadanie ID: 30 (Priorytet: 1)
+[Worker] Pobrano zadanie ID: 10 (Priorytet: 2)
+
+[Main] Zamykam kolejke...
+[Worker] Odebrano sygnal stopu. Koncze prace.
+[Main] Program zakonczyl sie poprawnie.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
