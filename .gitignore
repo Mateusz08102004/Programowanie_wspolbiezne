@@ -1,0 +1,37 @@
+# ==========================================
+# Kompilacja i pliki binarne (C / GCC)
+# ==========================================
+# Ignorujemy pliki obiektowe (.o) powstające podczas kompilacji
+*.o
+*.obj
+
+# Ignorujemy pliki wykonywalne (aplikacje) - pod Windows (.exe) i Linux (bez rozszerzenia)
+*.exe
+*.out
+*.app
+
+# Jeśli budujesz projekt za pomocą Make, ignorujemy foldery buildów
+build/
+dist/
+
+# ==========================================
+# Środowisko programistyczne (VS Code)
+# ==========================================
+# Ignorujemy lokalne konfiguracje VS Code (np. c_cpp_properties.json, które modyfikowałeś)
+# UWAGA: Jeśli pracujesz w zespole i chcesz dzielić się np. konfiguracją zadań (tasks.json),
+# możesz odkomentować poniższe reguły selektywnie. Na ogół jednak konfiguracja IntelliSense
+# jest specyficzna dla Twojego komputera (ścieżka do GCC).
+.vscode/
+
+# ==========================================
+# Systemowe i tymczasowe pliki Windows / macOS
+# ==========================================
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ==========================================
+# Logi i wyniki testów (przydatne przy statystykach)
+# ==========================================
+# Jeśli Twój program będzie zapisywał statystyki wydajności do plików tekstowych lub CSV
+*.log
